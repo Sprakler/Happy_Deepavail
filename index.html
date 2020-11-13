@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+<html>
+	<head>
+		<title>Happy Diwali</title>
+		<style>
+		body	{
+			background-color : #001126;
+		}
+		@keyframes 			firework-animation {
+			0% {background-color : #ff8426;}
+			25% {background-color : #fffc84;}
+			50% {background-color : #ff83f4;}
+			75% {background-color : #83b6ff;}
+			100% {background-color : #ff8426;}
+		}
+		@-webkit-keyframes 	firework-animation {
+			0% {background-color : #ff8426;}
+			25% {background-color : #fffc84;}
+			50% {background-color : #ff83f4;}
+			75% {background-color : #83b6ff;}
+			100% {background-color : #ff8426;}
+		}
+		@keyframes 			firework-seed-animation	{
+			0% {background-color : #ff8426;}
+			25% {background-color : #fffc84;}
+			100% {background-color : #ff8426;}
+		}
+		@-webkit-keyframes	firework-seed-animation	{
+			0% {background-color : #ff8426;}
+			25% {background-color : #fffc84;}
+			100% {background-color : #ff8426;}
+		}
+		@keyframes 			firework-fade-animation {
+			0% {opacity : 1;}
+			50% {opacity : 1;}
+			100% {opacity : 0;}
+		}
+		@-webkit-keyframes 	firework-fade-animation {
+			0% {opacity : 1;}
+			50% {opacity : 1;}
+			100% {opacity : 0;}
+		}
+		.fireWorkBatch {
+			z-index : 999;
+			position: absolute;
+			top : 0px;
+			left : 0px;
+			animation-name : firework-fade-animation;
+			animation-timing-function : cubic-bezier(0.5, 0, 1. 1);
+			animation-duration : 2.5s;
+		}
+		.fireWorkParticle {
+			z-index : 999;
+			position: absolute;
+			height : 5px;
+			width : 5px;
+			border-radius : 2.5px;
+			animation-name : firework-animation;
+			animation-timing-function : linear;
+			animation-duration : 1s;
+			animation-iteration-count : infinite;
+		}
+		.fireWorkSeed {
+			z-index : 999;
+			position: absolute;
+			height : 5px;
+			width : 5px;
+			border-radius : 5px;
+			animation-name : firework-seed-animation;
+			animation-timing-function : linear;
+			animation-duration : 0.5s;
+			animation-iteration-count : infinite;
+		}		
+		</style>
+		<style>
+			
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #001126;
+	/* overflow: hidden; */
+}
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: #001126;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 20px 100px rgba(0,0,0,.5);
+}
+
+.circle:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 8px dotted #fff;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transform: scale(1.1);
+    animation: rotate 30s linear infinite;
+}
+
+.light{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 120px;
+    background: #8B4513;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    box-shadow: 0 0 25px rgba(0,0,0,.5);
+    border: 5px solid #fff;
+}
+
+.light:before{
+    content: '';
+    position: absolute;
+    left: calc(50% - 40px);
+    top: -68%;
+    width: 40px;
+    height: 80px;
+    background: #ff0;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transform-origin: bottom right;
+    filter: blur(2px);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(30deg);
+        box-shadow: 0 0 30px #ff0;
+    }
+     25%
+    {
+        transform: rotate(20deg);
+    }
+     50%
+    {
+        transform: rotate(15deg);
+        box-shadow: 0 0 100px #ff0;
+    }
+     75%
+    {
+        transform: rotate(20deg);
+    }
+     100%
+    {
+        transform: rotate(30deg);
+        box-shadow: 0 0 30px #ff0;
+    }
+}
+
+@keyframes rotate
+{
+    0%
+    {
+        transform: scale(1.1) rotate(0deg);
+    }
+    100%
+    {
+        transform: scale(1.1) rotate(360deg);
+    }
+    
+    
+}
+
+h1 {
+    font-family: sans-serif;
+    margin: 40px 0 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    line-height: 60px;
+    text-shadow: 0 15px 5px rgba(0, 0, 0, .2);
+}
+
+h1 span{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 100px;
+}
+
+h3{
+    font-family:'Cookie', cursive;;
+    margin: 20px 0 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+    text-shadow: 0 15px 5px rgba(0, 0, 0, .2);
+}
+.text{
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+		</style>
+	</head>
+	<body>
+		<div id = "board"></div>
+		<div class="container">
+		<div class="circle">
+		    <h1>Happy<br><span>Diwali</span></h1>
+		    <div class="light"></div>
+		</div>
+	</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<center>
+			<div class="text">
+			<h4>I want to tell a story , once a opon a time Ram the prince of Ayodhya went on a 14 year exile by his father king 
+				dasharat, he left for the forest with his wife sita and his brother laxman , after spending 14 years of exile they 
+				returned to the kingdom , the people welcomed them with diyas and lamps, the city was filled with joy and enlightment , 
+				today we celeberate this day as diwali or also called as deepavali , it markes the return of lord Ram into Ayodhya, 
+				deepavali also marks the weeding of Goddess Laxmi and Lord Vishnu , it is a festival of lights, it is a festival of 
+				togetherness, and also a festivals of cleaning up . It is beloved that goddess laxmi enters the house which is clearn 
+				and bright . From shelves to garden and store rooms, every thing in our home's are deep clearned but some how the 
+				clearn up is limited that, it doesn't extend beyond our shelves into our lives.
+				</h4>
+			<br>
+			<h4>Why dont we change this in 2020 ?</h4>
+			<h4>Why dont you and i remove the clutter from our lives ?</h4>
+			<h4>
+				I should tell myself first but no harm in share with u too .
+				And here is how we do this 
+				<br>
+				<br>
+				1)  We clean up our torn clothes and shevels but how many of us clean up the shelf of our old habits,
+				how many of us threw away our grudge's , a good place to start the clean up is "Social Media ".
+				This diwali try to make friend's, instead of watching the likes (or) posting your routine.
+				<br>
+				<br>
+				2)  This diwali try to clean up your finances, diwali makes the start of new finance year for many Indian's.
+				<br>
+				<br>
+				3)  We go on for a holiday and click a thousand photos instead of enjoying a moment we capture them in our camera , 
+				we document so much that we forget to cherish it too. Ok Google Photos gives us unlimited storage to store the pictures,
+				but it cant take u back to the same moment which u were taking the picture instead of enjoing it. 
+				From This Diwali Try to enjoy the moment's which you live in instead of ruining it.
+				<br>
+				<br>
+				4)  How many of us will be cleaning these shelves this diwali?
+				Atleast I felt that "Wanting things makes me happy than having them" . While cleaning my room in hostal when i hold
+				the things in the hands, my mind took me back to those moments when i didnt have and to the moment when i got that. Comparing
+				the time when i was holding the material in my hand and to that of the memories, i was in a zugzwang situation.
+				<br>
+				Donot limit  your happiness in to materials.
+				<br>
+				This Diwali Shop wisely and think twice about it.
+				<br>
+				<br>
+				5)  Well, it’s a major festival in India, and you’ll find almost everyone celebrating the same.
+				Celebrate An Environmentally Safe Diwali “Green Is The New Black. Have A Eco-Friendly Diwali.”
+				Let Us Have A Smoke Free And Breathe Free Diwali. “Lets Fill Our Homes With Prayers & Light Not With Fumes & Crackers.”
+				<br>
+				<br>
+				If in case you didn't bought any crackers dont feel sad just tap on the screen and Enjoy the moment (Again without taking photos)
+				<br>
+				<br>
+				Happy Deepavali</h4>
+			</div>
+		</center>
+	</body>
+	<script>
+		var brd = document.createElement("DIV");
+		document.body.insertBefore(brd, document.getElementById("board"));
+
+		seeds = [];
+		particles = [];
+
+		const fwkPtcIniV = 0.5;
+		const fwkSedIniV = 0.5;
+		const fwkPtcIniT = 2500;
+		const fwkSedIniT = 1000;
+		const a = 0.0005;
+		const g = 0.0005;
+		const v = 0.3;
+		const cursorXOffset = 5;
+		const cursorYOffset = 0;
+
+
+		function newFireworkParticle(x, y, angle)
+		{
+			var fwkPtc = document.createElement("DIV");
+			fwkPtc.setAttribute('class', 'fireWorkParticle');
+			fwkPtc.time = fwkPtcIniT;
+			while(angle > 360)
+				angle -= 360;
+			while(angle < 0)
+				angle += 360;
+			fwkPtc.velocity = [];
+			if(angle > 270)
+			{
+				fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
+				fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
+			}
+			else if(angle > 180)
+			{
+				fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
+				fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
+			}
+			else if(angle > 90)
+			{
+				fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
+				fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
+			}
+			else
+			{
+				fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
+				fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
+			}
+			fwkPtc.position = [];
+			fwkPtc.position.x = x;
+			fwkPtc.position.y = y;
+			fwkPtc.style.left = fwkPtc.position.x + 'px';
+			fwkPtc.style.top = fwkPtc.position.y + 'px';
+			if(particles == null)
+				particles = [];
+			particles.push(fwkPtc);
+			return fwkPtc;
+		}
+
+		document.addEventListener("click", newFireWorkOnClick);
+
+		function newFireWorkOnClick(event)
+		{
+			let pos_y = window.scrollY;
+			let pos_x = window.scrollX;
+
+			newFireworkSeed(event.pageX - brd.offsetLeft + cursorXOffset, event.pageY - brd.offsetTop + cursorYOffset);
+			window.scrollTo(pos_x,pos_y);
+		}
+
+		function newFireworkSeed(x, y)
+		{
+			var fwkSed = document.createElement("DIV");
+			fwkSed.setAttribute('class', 'fireWorkSeed');
+			brd.appendChild(fwkSed);
+			fwkSed.time = fwkSedIniT;
+			fwkSed.velocity = [];
+			fwkSed.velocity.x = 0;
+			fwkSed.velocity.y = fwkSedIniV;
+			fwkSed.position = [];
+			fwkSed.position.x = x;
+			fwkSed.position.y = y;
+			fwkSed.style.left = fwkSed.position.x + 'px';
+			fwkSed.style.top = fwkSed.position.y + 'px';
+			if(seeds == null)
+				seeds = [];
+			seeds.push(fwkSed);
+			return fwkSed;
+		}
+		
+		function newFireWorkStar(x, y)
+		{
+			var fwkBch = document.createElement("DIV");
+			fwkBch.setAttribute('class', 'fireWorkBatch');
+			var a = 0;
+			while(a < 360)
+			{
+				var fwkPtc = newFireworkParticle(x, y, a);
+				fwkBch.appendChild(fwkPtc);
+				a += 5;
+			}
+			brd.appendChild(fwkBch);
+		}
+
+		var before = Date.now();
+		var id = setInterval(frame, 5);
+		
+		function frame()
+		{
+			var current = Date.now();
+			var deltaTime = current - before;
+			before = current;
+			for(i in seeds)
+			{
+				var fwkSed = seeds[i];
+				fwkSed.time -= deltaTime;
+				if(fwkSed.time > 0)
+				{
+					fwkSed.velocity.x -= fwkSed.velocity.x * a * deltaTime;
+					fwkSed.velocity.y -= g * deltaTime + fwkSed.velocity.y * a * deltaTime;
+					fwkSed.position.x += fwkSed.velocity.x * deltaTime;
+					fwkSed.position.y -= fwkSed.velocity.y * deltaTime;
+					fwkSed.style.left = fwkSed.position.x + 'px';
+					fwkSed.style.top = fwkSed.position.y + 'px';
+				}
+				else
+				{
+					newFireWorkStar(fwkSed.position.x, fwkSed.position.y);
+					fwkSed.parentNode.removeChild(fwkSed);
+					seeds.splice(i, 1);
+				}
+			}
+			for(i in particles)
+			{
+				var fwkPtc = particles[i];
+				fwkPtc.time -= deltaTime;
+				if(fwkPtc.time > 0)
+				{
+					fwkPtc.velocity.x -= fwkPtc.velocity.x * a * deltaTime;
+					fwkPtc.velocity.y -= g * deltaTime + fwkPtc.velocity.y * a * deltaTime;
+					fwkPtc.position.x += fwkPtc.velocity.x * deltaTime;
+					fwkPtc.position.y -= fwkPtc.velocity.y * deltaTime;
+					fwkPtc.style.left = fwkPtc.position.x + 'px';
+					fwkPtc.style.top = fwkPtc.position.y + 'px';
+				}
+				else
+				{
+					fwkPtc.parentNode.removeChild(fwkPtc);
+					particles.splice(i, 1);
+				}
+			}
+		}
+	</script>
+</html>
